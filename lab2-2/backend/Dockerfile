@@ -8,5 +8,6 @@ RUN apt-get install --no-install-recommends apt-utils --yes \
     && apt-get install --no-install-recommends npm --yes \
     && apt-get install --no-install-recommends nodejs --yes
 
+EXPOSE 5000
 RUN npm install
 RUN node server.js
