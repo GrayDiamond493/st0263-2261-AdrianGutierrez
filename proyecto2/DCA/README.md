@@ -163,7 +163,7 @@ cd $HOME/moodle
 ```
 
 - *Nota: Es sumamente importante cambiar las IPs en  los archivos docker-compose.yml por las usadas verdaderamente en el proyecto*
-- *El archivo docker-compose.yml se encuentra en este repositorio bajo el nombre: [docker-compose-moodle.yml]()*
+- *El archivo docker-compose.yml se encuentra en este repositorio bajo el nombre: [docker-compose-moodle.yml](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/proyecto2/DCA/Scripts/docker-compose-moodle.yml)*
 
 ```bash 
 # Subir imagen de Docker
@@ -212,7 +212,7 @@ cd $HOME/moodle
 ```
 
 - *Nota: Es sumamente importante cambiar las IPs en  los archivos docker-compose.yml por las usadas verdaderamente en el proyecto*
-- *El archivo docker-compose.yml se encuentra en este repositorio bajo el nombre: [docker-compose-moodle.yml]()*
+- *El archivo docker-compose.yml se encuentra en este repositorio bajo el nombre: [docker-compose-moodle.yml](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/proyecto2/DCA/Scripts/docker-compose-moodle.yml)*
 
 ```bash 
 # Subir imagen de Docker
