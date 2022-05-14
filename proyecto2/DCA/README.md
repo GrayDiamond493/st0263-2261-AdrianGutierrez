@@ -116,7 +116,7 @@ cp docker-compose-mariadb.yml $HOME/mariadb/docker-compose.yml
 cd $HOME/mariadb
 ```
 - *Nota: Es sumamente importante cambiar las IPs en  los archivos docker-compose.yml por las usadas verdaderamente en el proyecto*
-- *El archivo docker-compose.yml se encuentra en este repositorio bajo el nombre: [docker-compose-mariadb.yml]()*
+- *El archivo docker-compose.yml se encuentra en este repositorio bajo el nombre: [docker-compose-mariadb.yml](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/proyecto2/DCA/Scripts/docker-compose-mariadb.yml)*
 ```
 # Subir imagen de Docker
 docker-compose up -d
