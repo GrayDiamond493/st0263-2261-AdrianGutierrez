@@ -7,3 +7,5 @@ services:
     - ./nginx.conf:/etc/nginx/nginx.conf:ro
     ports:
     - 80:80  
+
+

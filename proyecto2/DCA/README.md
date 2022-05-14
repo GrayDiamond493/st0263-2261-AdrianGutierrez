@@ -1,6 +1,6 @@
 # Despliegue DCA
 
-Para este proyecto, se pretende desplegar una aplicación open source LAMP de comunidad que represente un sistema de información del tipo Sistema de Gestión de Aprendizaje (LMS, por sus siglas en inglés). En este caso se seleccionará Moodle para ser desplegado en DCA (Data Center Academico).
+Para este proyecto, se pretende desplegar una aplicación open source LAMP de comunidad que represente un sistema de información del tipo Sistema de Gestión de Aprendizaje (LMS, por sus siglas en inglés). En este caso se seleccionará Moodle para ser desplegado en DCA (Data Center Academico). En cuanto a seguridad, ya se cuenta con un certificado ssl por parte del dominio asignado. 
 
 El objetivo de este proyecto es migrarlo al dominio *vpl1.dis.eafit.edu.co/*.
 
@@ -24,14 +24,13 @@ Para alcanzar un modelo de altamente escalable, con alta disponibilidad y rendim
    - Conecta con:
    - Moodle 1: *192.168.10.205*
         - Conecta con:
-        - MariaDB: *192.168.10.153*
-        - NFS: *192.168.10.152*
+        - MariaDB: *192.168.10.152*
+        - NFS: *192.168.10.153*
 
    - Moodle 2: *192.168.10.206*
         - Conecta con:
-        - MariaDB: *192.168.10.153*
-        - NFS: *192.168.10.152*
-
+        - MariaDB: *192.168.10.152*
+        - NFS: *192.168.10.153*
 
 ## Conexión
 
@@ -49,7 +48,7 @@ En nuestro caso concreto, al haber configurado las credenciales de cada máquina
 ssh userdca@192.168.10.X
 ```
 
-Donde 'x' consiste en el host al que se desea conectarse. Para este proyecto, se tienen 5 máquinas.
+Donde 'x' consiste en el host al que se desea conectarse. Para este proyecto, se tienen las 5 máquinas descritas anteriormente.
 
 ## Configuración
 
@@ -135,10 +134,36 @@ git clone https://github.com/st0263eafit/st0263-2261.git
 cd st0263-2261/proyecto2
 ```
 
+- Instalar NFS-Client nativo en Linux.
+*Recordatorio: la IP del NFS-Server es:192.168.10.153*
+
+```bash 
+sudo apt install nfs-common
+sudo mkdir -p /shares/moodle
+# Conectarse manualmente al NFS-Server:
+sudo mount -t nfs4 192.168.10.153:/srv/nfs/moodle /shares/moodle
+# Configurarlo para cada que baje y suba la máquina, se conecte al NFS-Server
+```
+
+Luego, debe agregarse la siguiente línea al final del archivo /etc/fstab
+
+```bash
+sudo vim /etc/fstab
+192.168.10.153:/srv/nfs/moodle	/shares/moodle	nfs4	defaults,user,exec	0 0
+```
+
+*Recuperado de: https://linuxconfig.org/how-to-set-up-a-nfs-server-on-debian-10-buster*
+
 - Configurar máquina destinada a la aplicación (Moodle 1).
 
+```bash 
+mkdir $HOME/moodle
+cp docker-compose-moodle.yml $HOME/moodle/docker-compose.yml
+cd $HOME/moodle
+```
+
 - *Nota: Es sumamente importante cambiar las IPs en  los archivos docker-compose.yml por las usadas verdaderamente en el proyecto*
-- *El archivo docker-compose.yml se encuentra en este repositorio bajo el nombre: []()*
+- *El archivo docker-compose.yml se encuentra en este repositorio bajo el nombre: [docker-compose-moodle.yml]()*
 
 ```bash 
 # Subir imagen de Docker
@@ -147,7 +172,7 @@ docker-compose up -d
 
 Una vez terminado, la configuración de la máquina debería verse de la siguiente manera:
 
-![Screenshot]()
+![Screenshot](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/proyecto2/DCA/Images/2.Moodle1.jpg)
 
 ### Moodle 2
 - Clonar repositorio oficial de la materia:
@@ -158,10 +183,36 @@ git clone https://github.com/st0263eafit/st0263-2261.git
 cd st0263-2261/proyecto2
 ```
 
+- Instalar NFS-Client nativo en Linux.
+*Recordatorio: la IP del NFS-Server es:192.168.10.153*
+
+```bash 
+sudo apt install nfs-common
+sudo mkdir -p /shares/moodle
+# Conectarse manualmente al NFS-Server:
+sudo mount -t nfs4 192.168.10.153:/srv/nfs/moodle /shares/moodle
+# Configurarlo para cada que baje y suba la máquina, se conecte al NFS-Server
+```
+
+Luego, debe agregarse la siguiente línea al final del archivo /etc/fstab
+
+```bash
+sudo vim /etc/fstab
+192.168.10.153:/srv/nfs/moodle	/shares/moodle	nfs4	defaults,user,exec	0 0
+```
+
+*Recuperado de: https://linuxconfig.org/how-to-set-up-a-nfs-server-on-debian-10-buster*
+
 - Configurar máquina destinada a la aplicación (Moodle 2).
 
+```bash 
+mkdir $HOME/moodle
+cp docker-compose-moodle.yml $HOME/moodle/docker-compose.yml
+cd $HOME/moodle
+```
+
 - *Nota: Es sumamente importante cambiar las IPs en  los archivos docker-compose.yml por las usadas verdaderamente en el proyecto*
-- *El archivo docker-compose.yml se encuentra en este repositorio bajo el nombre: []()*
+- *El archivo docker-compose.yml se encuentra en este repositorio bajo el nombre: [docker-compose-moodle.yml]()*
 
 ```bash 
 # Subir imagen de Docker
@@ -170,7 +221,7 @@ docker-compose up -d
 
 Una vez terminado, la configuración de la máquina debería verse de la siguiente manera:
 
-![Screenshot]()
+![Screenshot](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/proyecto2/DCA/Images/3.Moodle2.jpg)
 
 ### Load Balancer
 - Clonar repositorio oficial de la materia:
