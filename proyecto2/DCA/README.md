@@ -122,6 +122,10 @@ cd $HOME/mariadb
 docker-compose up -d
 ```
 
+Una vez terminado, la configuración de la máquina debería verse de la siguiente manera:
+
+![Screenshot](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/proyecto2/DCA/Images/4.MariaDB.jpg)
+
 ### Moodle 1
 
 ### Moodle 2
