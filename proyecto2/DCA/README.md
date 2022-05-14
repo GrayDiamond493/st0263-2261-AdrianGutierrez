@@ -12,12 +12,14 @@ Para conectarse a cada máquina, se debe contar con conexión constante a la VPN
 
 Una vez conectado a la VPN, conectarse remotamente a las máquinas por medio de *ssh*.
 
-``` ssh <user>@<ip>
+``` 
+ssh <user>@<ip>
 ```
 
 En nuestro caso concreto, al haber configurado las credenciales de cada máquina, sería:
 
-``` ssh userdca@192.168.10.X
+``` 
+ssh userdca@192.168.10.X
 ```
 
 Donde 'x' consiste en el host al que se desea conectarse. Para este proyecto, se tienen 5 máquinas.
