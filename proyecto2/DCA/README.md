@@ -127,10 +127,81 @@ Una vez terminado, la configuración de la máquina debería verse de la siguien
 ![Screenshot](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/proyecto2/DCA/Images/4.MariaDB.jpg)
 
 ### Moodle 1
+- Clonar repositorio oficial de la materia:
+
+```bash 
+cd $HOME
+git clone https://github.com/st0263eafit/st0263-2261.git
+cd st0263-2261/proyecto2
+```
+
+- Configurar máquina destinada a la aplicación (Moodle 1).
+
+- *Nota: Es sumamente importante cambiar las IPs en  los archivos docker-compose.yml por las usadas verdaderamente en el proyecto*
+- *El archivo docker-compose.yml se encuentra en este repositorio bajo el nombre: []()*
+
+```bash 
+# Subir imagen de Docker
+docker-compose up -d
+```
+
+Una vez terminado, la configuración de la máquina debería verse de la siguiente manera:
+
+![Screenshot]()
 
 ### Moodle 2
+- Clonar repositorio oficial de la materia:
+
+```bash 
+cd $HOME
+git clone https://github.com/st0263eafit/st0263-2261.git
+cd st0263-2261/proyecto2
+```
+
+- Configurar máquina destinada a la aplicación (Moodle 2).
+
+- *Nota: Es sumamente importante cambiar las IPs en  los archivos docker-compose.yml por las usadas verdaderamente en el proyecto*
+- *El archivo docker-compose.yml se encuentra en este repositorio bajo el nombre: []()*
+
+```bash 
+# Subir imagen de Docker
+docker-compose up -d
+```
+
+Una vez terminado, la configuración de la máquina debería verse de la siguiente manera:
+
+![Screenshot]()
 
 ### Load Balancer
+- Clonar repositorio oficial de la materia:
+
+```bash 
+cd $HOME
+git clone https://github.com/st0263eafit/st0263-2261.git
+cd st0263-2261/proyecto2
+```
+
+- Configurar máquina destinada a Balanceador de Carga.
+
+```bash 
+mkdir $HOME/nginx-lb
+cp docker-compose-nginx-lb.yml $HOME/nginx-lb/docker-compose.yml
+cp nginx-lb.conf $HOME/nginx-lb/nginx.conf
+cd $HOME/nginx-lb
+```
+
+- *Nota: Es sumamente importante cambiar las IPs en  los archivos docker-compose.yml  y ngninx.conf por las usadas verdaderamente en el proyecto*
+- *El archivo docker-compose.yml se encuentra en este repositorio bajo el nombre: [docker-compose-nginx-lb.yml]()*
+- *El archivo nginx.conf se encuentra en este repositorio bajo el nombre: [nginx-lb.conf]()*
+
+```bash 
+# Subir imagen de Docker
+docker-compose up -d
+```
+
+Una vez terminado, la configuración de la máquina debería verse de la siguiente manera:
+
+![Screenshot]()
 
 ### Confirmación
 
