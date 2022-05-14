@@ -96,7 +96,7 @@ sudo systemctl restart nfs-kernel-server
 
 Una vez terminado, la configuración de la máquina debería verse de la siguiente manera:
 
-![Screenshot](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/proyecto2/DCA/Screenshots/5.NFS.jpg)
+![Screenshot](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/proyecto2/DCA/Images/5.NFS.jpg)
 
 ### MariaDB
 
