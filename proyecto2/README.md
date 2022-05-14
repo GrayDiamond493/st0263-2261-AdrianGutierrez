@@ -16,7 +16,7 @@ despliegue monolítico (stack lamp completo) y otro servidor donde corre el VPL-
 ## Dominios
 
 - DCA: *vpl1.dis.eafit.edu.co/*
-- AWS: 
+- AWS: *moodletelematica.tk*
 
 ## Descripción
 

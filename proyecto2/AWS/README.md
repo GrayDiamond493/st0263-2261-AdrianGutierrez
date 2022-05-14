@@ -2,7 +2,7 @@
 
 Para este proyecto, se pretende desplegar una aplicación open source LAMP de comunidad que represente un sistema de información del tipo Sistema de Gestión de Aprendizaje (LMS, por sus siglas en inglés). En este caso se seleccionará Moodle para ser desplegado en AWS.
 
-El objetivo de este proyecto es migrarlo al dominio **.
+El objetivo de este proyecto es migrarlo al dominio *moodletelematica.tk*.
 
 ## Prerequisitos
 
@@ -19,7 +19,7 @@ Para alcanzar un modelo de altamente escalable, con alta disponibilidad y rendim
 ### Confirmación
 
 Una vez llegado a este punto, puede probarse que funciona correctamente al digitar el dominio en cualquier browser
-- **
+- *moodletelematica.tk*
 
 Debería verse de la siguiente manera:
 
