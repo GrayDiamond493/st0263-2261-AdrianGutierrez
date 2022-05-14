@@ -191,8 +191,8 @@ cd $HOME/nginx-lb
 ```
 
 - *Nota: Es sumamente importante cambiar las IPs en  los archivos docker-compose.yml  y ngninx.conf por las usadas verdaderamente en el proyecto*
-- *El archivo docker-compose.yml se encuentra en este repositorio bajo el nombre: [docker-compose-nginx-lb.yml]()*
-- *El archivo nginx.conf se encuentra en este repositorio bajo el nombre: [nginx-lb.conf]()*
+- *El archivo docker-compose.yml se encuentra en este repositorio bajo el nombre: [docker-compose-nginx-lb.yml](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/proyecto2/DCA/Scripts/docker-compose-nginx-lb.yml)*
+- *El archivo nginx.conf se encuentra en este repositorio bajo el nombre: [nginx-lb.conf](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/proyecto2/DCA/Scripts/nginx-lb.conf)*
 
 ```bash 
 # Subir imagen de Docker
@@ -201,7 +201,7 @@ docker-compose up -d
 
 Una vez terminado, la configuración de la máquina debería verse de la siguiente manera:
 
-![Screenshot]()
+![Screenshot](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/proyecto2/DCA/Images/1.NginxLB.jpg)
 
 ### Confirmación
 
