@@ -14,6 +14,10 @@ Para alcanzar un modelo de altamente escalable, con alta disponibilidad y rendim
 
 *Recuperado de: https://aws.amazon.com/es/blogs/aws-spanish/despliegue-de-moodle-en-alta-disponibilidad-en-aws/*
 
+No obstante, la arquitectura final utilizada es la siguiente, la cual consiste en una variante que toma como base la referencia anterior:
+
+![Arquitectura](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/proyecto2/AWS/Images/ArquitecturaAWS.PNG)
+
 ## Configuración
 
 ### Security Groups
