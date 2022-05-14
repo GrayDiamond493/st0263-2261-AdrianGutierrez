@@ -259,3 +259,6 @@ Una vez terminado, la configuración de la máquina debería verse de la siguien
 Una vez llegado a este punto, puede probarse que funciona correctamente al digitar el dominio en cualquier browser
 - *vpl1.dis.eafit.edu.co/*
 
+Debería verse de la siguiente manera:
+
+![Screenshot](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/proyecto2/DCA/Images/moodleScreen.PNG)
