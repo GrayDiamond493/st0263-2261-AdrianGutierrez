@@ -10,7 +10,7 @@ El objetivo de este proyecto es migrarlo al dominio **.
 
 Para alcanzar un modelo de altamente escalable, con alta disponibilidad y rendimiento, se planteó la siguiente arquitectura:
 
-![Arquitectura]() 
+![Arquitectura](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/proyecto2/AWS/Images/moodlearch2.jpg) 
 
 *Recuperado de: https://aws.amazon.com/es/blogs/aws-spanish/despliegue-de-moodle-en-alta-disponibilidad-en-aws/*
 
