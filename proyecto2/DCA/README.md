@@ -18,7 +18,7 @@ El objetivo de este proyecto es migrarlo al dominio *vpl1.dis.eafit.edu.co/*.
 
 Para alcanzar un modelo de altamente escalable, con alta disponibilidad y rendimiento, se planteó la siguiente arquitectura:
 
-![Arquitectura]() 
+![Arquitectura](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/proyecto2/DCA/Screenshots/ArquitecturaDCA.drawio.svg) 
 
 -> Proxy Inverso/Load Balancer: *192.168.10.190*
    Conecta con:
