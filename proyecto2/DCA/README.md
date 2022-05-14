@@ -20,17 +20,17 @@ Para alcanzar un modelo de altamente escalable, con alta disponibilidad y rendim
 
 ![Arquitectura](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/proyecto2/DCA/Screenshots/ArquitecturaDCA.drawio.svg) 
 
--> Proxy Inverso/Load Balancer: *192.168.10.190*
-   Conecta con:
-   -> Moodle 1: *192.168.10.205*
-        Conecta con:
-        MariaDB: *192.168.10.153*
-        NFS: *192.168.10.152*
+- Proxy Inverso/Load Balancer: *192.168.10.190*
+   - Conecta con:
+   - Moodle 1: *192.168.10.205*
+        - Conecta con:
+        - MariaDB: *192.168.10.153*
+        - NFS: *192.168.10.152*
 
-   -> Moodle 2: *192.168.10.206*
-        Conecta con:
-        MariaDB: *192.168.10.153*
-        NFS: *192.168.10.152*
+   - Moodle 2: *192.168.10.206*
+        - Conecta con:
+        - MariaDB: *192.168.10.153*
+        - NFS: *192.168.10.152*
 
 
 ## Conexión
