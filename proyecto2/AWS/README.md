@@ -271,35 +271,22 @@ disponibilidad.
   - Minimum capacity: 2
   - Maximum capacity: 3.
   *Esta configuración permite escalar entre dos y tres máquinas.*
-● En esta misma sección para scaling policies:
-o Seleccione target tracking scaling policy.
-▪ Scaling policy name: MyWebApp-ScalingPolicy
-▪ Metric type: Average CPU utilization.
-▪ Target Value: 60.
-o Click en “next”
-Esta configuración le va a indicar al servicio de auto scaling mantener en promedio una utilización de CPU
-de las instancias del 60%. De esta forma, el servicio de auto scaling automáticamente adicionará o quitará
-11
-capacidad tanto como sea requerido con el fin de mantener la métrica seleccionada lo más cercana posible
-al umbral definido. Click en Next.
-o Click en Next. Add notifications.
-▪ Click. Next.
-o Add Tags
-▪ Click en “Add tag”
-● Key: Name
-● Value: WebServer
-● Click Next
+- En esta misma sección para scaling policies:
+  - Seleccione target tracking scaling policy.
+  - Scaling policy name: MyWebApp-ScalingPolicy
+  - Metric type: Average CPU utilization.
+  - Target Value: 60.
 
+Esta configuración le va a indicar al servicio de auto scaling mantener en promedio una utilización de CPU de las instancias del 60%. De esta forma, el servicio de auto scaling automáticamente adicionará o quitará capacidad tanto como sea requerido con el fin de mantener la métrica seleccionada lo más cercana posible al umbral definido. 
 
+- En el apartado Añadir notificación no haremos nada, siguiente:
+  - Add Tags
 
- Aqui en opciones avanzadas tendremos esto:
+- En el apartado de etiquetas:
+  - Key: Name
+  - Value: WebServer
+  - Click Next
 
-Vamos a siguiente, donde tendremos lo siguiente:
-![image](https://user-images.githubusercontent.com/71454879/168448897-8e1fa1b7-0692-4e3c-adf5-e375e2b028d0.png)
-En el apartado Añadir notificación no haremos nada, siguiente:
-![image](https://user-images.githubusercontent.com/71454879/168448937-4d50ea17-75cc-4877-ad42-868bbd79ad84.png)
-Para finalizar, en crear etiqueta tendremos lo siguiente:
-![image](https://user-images.githubusercontent.com/71454879/168448960-e71cae04-9880-4761-afdf-aad54ddcebb1.png)
 
 Si todo salió bien veremos esto:
 ![image](https://user-images.githubusercontent.com/71454879/168448988-1ebca9df-3406-4132-a6e6-8662c23eba90.png)
