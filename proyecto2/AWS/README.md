@@ -117,7 +117,7 @@ De esta manera, todas las maquinas de Moodle se conectaran a esta mediante el si
 - Punto de enlace: database-1.c4dkqd8k6b30.us-east-1.red.amazonaws.com
 - Puerto: 3306
 
-Ese punto de enlace debe ser especificado en el archivo [docker-compose.yml](). Además, debemos asegurarnos de que tenga abierto el puerto 3306. 
+Ese punto de enlace debe ser especificado en el archivo [docker-compose.yml](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/proyecto2/AWS/Scripts/docker-compose.yml). Además, debemos asegurarnos de que tenga abierto el puerto 3306. 
 
 ### Lanzar EC2 - Bastion Host
 
@@ -167,7 +167,7 @@ sudo usermod -a -G docker ec2-user
 pip3 install docker-compose
 ```
 Posterior a la instalación de docker y todo lo necesario en la máquina, se crea una carpeta llamada moodle y dentro de esta creamos usando nano o vim, un archivo
-[docker-compose.yml]()
+[docker-compose.yml](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/proyecto2/AWS/Scripts/docker-compose.yml)
 ```bash
 mkdir moodle
 cd moodle
