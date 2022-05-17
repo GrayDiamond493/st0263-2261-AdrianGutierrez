@@ -300,7 +300,7 @@ Si todo salió bien veremos esto:
 ### Confirmación
 
 Una vez llegado a este punto, puede probarse que funciona correctamente al digitar el dominio en cualquier browser
-- *moodletelematica.tk*
+- *http://elb-mywebapp-2141596622.us-east-1.elb.amazonaws.com/*
 
 Debería verse de la siguiente manera:
 
