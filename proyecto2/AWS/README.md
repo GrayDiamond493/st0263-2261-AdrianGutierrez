@@ -134,7 +134,7 @@ está maquina no tiene ninguna particularidad en su creación salvo que solo ten
 
 - Network: VPC-default
 - Subnet: subnet-public
-- Auto-assign Public IP: disable
+- Auto-assign Public IP: enable
 - File systems: Click en “Add file system”
   - Seleccionar el EFS Creado anteriormente (WP-EFS)
   - Como ruta en vez de /mnt/efs/fs1 -> coloque /mnt/efs/moodle
@@ -260,6 +260,8 @@ En el primer paso tendremos esta configuración:
 disponibilidad.
 
 ![image](https://user-images.githubusercontent.com/71454879/168448817-202e2d2c-26ed-4243-a014-4d56169078c6.png)
+Al terminar, Tendríamos la siguiente configuración:
+![network]()
 
 - En la sección de Configure advanced options:
   - Seleccione la casilla para: Attach to an existing load balancer.
@@ -269,6 +271,7 @@ disponibilidad.
 
 ![image](https://user-images.githubusercontent.com/71454879/168448861-c79e4c03-e06f-4d08-a37c-0fea166a198a.png)
 ![image](https://user-images.githubusercontent.com/71454879/168448862-dfadd62b-1c04-45c1-8f08-54c8f210e20d.png)
+![group]()
 
 - En la sección de Configure Group Size
   - Desired capacity: 2
@@ -280,6 +283,9 @@ disponibilidad.
   - Scaling policy name: MyWebApp-ScalingPolicy
   - Metric type: Average CPU utilization.
   - Target Value: 60.
+
+Al terminar, Tendríamos la siguiente configuración:
+![size]()
 
 Esta configuración le va a indicar al servicio de auto scaling mantener en promedio una utilización de CPU de las instancias del 60%. De esta forma, el servicio de auto scaling automáticamente adicionará o quitará capacidad tanto como sea requerido con el fin de mantener la métrica seleccionada lo más cercana posible al umbral definido. 
 
@@ -294,6 +300,9 @@ Esta configuración le va a indicar al servicio de auto scaling mantener en prom
 
 Si todo salió bien veremos esto:
 ![image](https://user-images.githubusercontent.com/71454879/168448988-1ebca9df-3406-4132-a6e6-8662c23eba90.png)
+
+Al observar detalles del Balanceador de Cargas:
+![lb]()
 
 
 
