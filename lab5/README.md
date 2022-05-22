@@ -12,6 +12,11 @@ Luego, es posible copiar el dataset dentro del Bucket. En este caso, se hace en 
 
 ![image]()
 
+Este Bucket se encuentra disponible publicamente desde el siguiente URL: https://aagutierrldatalake.s3.amazonaws.com/raw
+El sistema de archivos tiene el mismo orden de directorios y archivos que el directorio datasets, que provee el github de la materia.
+
+*Nota: Debe especificar el archivo a acceder. Por ejemplo: https://aagutierrldatalake.s3.amazonaws.com/raw/gutenberg-small/AbrahamLincoln___LincolnLetters.txt*
+
 Posteriormente, se procede a crear el Cluster, desde la sección EMR de AWS.
 
 ![image]()
@@ -81,6 +86,8 @@ Finalmente, se activa Hue con user 'hadoop'. Para esto, deben abrirse los siguie
 -9443
 
 Y, también, añadirlos a la sección  de Excepciones en ‘Public Access’ de EMR.
+
+![image]()
 
 Es posible encontrar la URL de acceso a Hue desde la sección *‘Application User Interfaces’* en el cluster activo. Para este caso concreto, fue esta:
 http://ec2-3-83-22-112.compute-1.amazonaws.com:8888/
