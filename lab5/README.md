@@ -200,5 +200,136 @@ Para poder utilizar la biblioteca MRJOB desde Python localmente, debe ser instal
 ```bash
 pip install mrjob
 ```
-
 *Nota: Se asume que ya se cuenta con pip instalado*
+
+Una vez instalada esta biblioteca, se puede empezar a resolver los ejercicios propuestos.
+
+Para todos los puntos, el resultado se da al correr un script con el siguiente comando:
+
+```bash
+python <program>.py <dataset>.txt
+```
+*Donde <program>.py es el script de Python con la solucion y <dataset>.txt el archivo de datos utilizado para el problema*
+
+1) Se tiene un conjunto de datos, que representan el salario anual de los empleados formales en Colombia por sector económico, según la DIAN.
+
+Los datos utilizados para este apartado, se encuentran en el archivo de nombre [dataempleados.txt]()
+
+1. El salario promedio por Sector Económico (SE)
+
+Este, fue calculado por medio del script nombrado [dataempleados-mr.py]()
+
+Y, al correrlo, se obtiene la siguiente solución:
+
+![sln]()
+
+2. El salario promedio por Empleado
+
+Este, fue calculado por medio del script nombrado [avgempleado.py]()
+
+Y, al correrlo, se obtiene la siguiente solución:
+
+![sln]()
+
+3. Número de SE por Empleado que ha tenido a lo largo de la estadística
+
+Este, fue calculado por medio del script nombrado [seempleado.py]()
+
+Y, al correrlo, se obtiene la siguiente solución:
+
+![sln]()
+
+2) Se tiene un conjunto de acciones de la bolsa, en la cual se reporta a diario el valor promedio por acción.
+
+Los datos utilizados para este apartado, se encuentran en el archivo de nombre [dataempresas.txt]()
+
+1. Por acción, dia-menor-valor, día-mayor-valor
+
+Este, fue calculado por medio del script nombrado [dataempresas-mr1.py]()
+
+Y, al correrlo, se obtiene la siguiente solución:
+
+![sln]()
+
+
+2. Listado de acciones que siempre han subido o se mantienen estables.
+
+Este, fue calculado por medio del script nombrado [dataempresas-mr2.py]()
+
+Y, al correrlo, se obtiene la siguiente solución:
+
+![sln]()
+
+3. DIA NEGRO: Saque el día en el que la mayor cantidad de acciones tienen el menor valor de acción (DESPLOME), suponga una inflación independiente del tiempo.
+
+Este, fue calculado por medio del script nombrado [dataempresas-mr2.py]()
+
+Y, al correrlo, se obtiene la siguiente solución:
+
+![sln]()
+
+3) Sistema de evaluación de películas
+
+Los datos utilizados para este apartado, se encuentran en el archivo de nombre [datapeliculas.txt]()
+
+1. Número de películas vista por un usuario, valor promedio de calificación
+
+Este, fue calculado por medio del script nombrado [datapeliculas-mr1.py]()
+
+Y, al correrlo, se obtiene la siguiente solución:
+
+![sln]()
+
+
+2. Día en que más películas se han visto
+
+Este, fue calculado por medio del script nombrado [datapeliculas-mr2.py]()
+
+Y, al correrlo, se obtiene la siguiente solución:
+
+![sln]()
+
+3. Día en que menos películas se han visto
+
+Este, fue calculado por medio del script nombrado [datapeliculas-mr3.py]()
+
+Y, al correrlo, se obtiene la siguiente solución:
+
+![sln]()
+
+
+4. Número de usuarios que ven una misma película y el rating promedio
+
+Este, fue calculado por medio del script nombrado [datapeliculas-mr4.py]()
+
+Y, al correrlo, se obtiene la siguiente solución:
+
+![sln]()
+
+
+5. Día en que peor evaluación en promedio han dado los usuarios
+
+Este, fue calculado por medio del script nombrado [datapeliculas-mr5.py]()
+
+Y, al correrlo, se obtiene la siguiente solución:
+
+![sln]()
+
+
+6. Día en que mejor evaluación han dado los usuarios
+
+Este, fue calculado por medio del script nombrado [datapeliculas-mr6.py]()
+
+Y, al correrlo, se obtiene la siguiente solución:
+
+![sln]()
+
+
+7. La mejor y peor película evaluada por genero
+
+Este, fue calculado por medio del script nombrado [datapeliculas-mr7.py]()
+
+Y, al correrlo, se obtiene la siguiente solución:
+
+![sln]()
+
