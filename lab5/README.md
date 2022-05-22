@@ -213,11 +213,11 @@ python <program>.py <dataset>.txt
 
 1) Se tiene un conjunto de datos, que representan el salario anual de los empleados formales en Colombia por sector económico, según la DIAN.
 
-Los datos utilizados para este apartado, se encuentran en el archivo de nombre [dataempleados.txt]()
+Los datos utilizados para este apartado, se encuentran en el archivo de nombre [dataempleados.txt](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/lab5-3/1.Salarios/dataempleados.txt)
 
 1. El salario promedio por Sector Económico (SE)
 
-Este, fue calculado por medio del script nombrado [dataempleados-mr.py]()
+Este, fue calculado por medio del script nombrado [dataempleados-mr.py](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/lab5-3/1.Salarios/dataempleados-mr.py)
 
 Y, al correrlo, se obtiene la siguiente solución:
 
@@ -225,7 +225,7 @@ Y, al correrlo, se obtiene la siguiente solución:
 
 2. El salario promedio por Empleado
 
-Este, fue calculado por medio del script nombrado [avgempleado.py]()
+Este, fue calculado por medio del script nombrado [avgempleado-mr.py](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/lab5-3/1.Salarios/avgempleado-mr.py)
 
 Y, al correrlo, se obtiene la siguiente solución:
 
@@ -233,7 +233,7 @@ Y, al correrlo, se obtiene la siguiente solución:
 
 3. Número de SE por Empleado que ha tenido a lo largo de la estadística
 
-Este, fue calculado por medio del script nombrado [seempleado.py]()
+Este, fue calculado por medio del script nombrado [seempleado-mr.py](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/lab5-3/1.Salarios/seempleado-mr.py)
 
 Y, al correrlo, se obtiene la siguiente solución:
 
