@@ -98,5 +98,17 @@ http://ec2-3-83-22-112.compute-1.amazonaws.com:8888/
 ## 5-2
 ### Gestión de Archivos en HDFS y S3
 
+Ahora, se realiza el manejo de archivos desde terminal EC2 en HDFS y desde Hue.
+
+
+
 ## 5-3
 ### MapReduce con MRJOB en Python
+
+Para poder utilizar la biblioteca MRJOB desde Python localmente, debe ser instalada desde el directorio del proyecto:
+
+```bash
+pip install mrjob
+```
+
+*Nota: Se asume que ya se cuenta con pip instalado*
