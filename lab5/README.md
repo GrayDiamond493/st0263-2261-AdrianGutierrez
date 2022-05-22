@@ -6,7 +6,7 @@ En primer lugar, se crea un Bucket en S3, que servirá como DataLake para este l
 
 Una vez creado, debe poder verse desde la consola de AWS para S3.
 
-![image](lab5\images\emr\create_bucket.png)
+![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/emr/create_bucket.png)
 
 ## 5-2
 ### Gestión de Archivos en HDFS y S3
