@@ -100,21 +100,95 @@ http://ec2-3-83-22-112.compute-1.amazonaws.com:8888/
 
 Ahora, se realiza el manejo de archivos desde terminal EC2 en HDFS y desde Hue.
 
+En primera instancia, debemos acceder al URL generado para Hue, al que nos conectamos anteriormente. http://ec2-3-83-22-112.compute-1.amazonaws.com:8888/
+
 ![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/hdfs/hue.png)
+
+Desde allí, es posible manejar archivos y directorios. Podemos crear un directorio /user/datasets
+
 ![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/hdfs/createdir-hue.png)
 
+También, pueden verse los distintos Buckets creados en S3:
+
 ![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/hdfs/s3-hue.png)
+
+Al copiar uno de los contenidos de los Buckes, específicamente, el directorio /raw del Bucket ‘aagutierrrldatalake’, es posible observar sus contenidos también desde la terminal de la instancia EC2, a través del comando 
+
+```bash
+hdfs dfs -ls /tmp/raw
+```
 ![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/hdfs/tmp-raw.png)
+
+Ahora, por ejemplo, colocamos los contenidos de uno de los directorios en otro. Primero, veamos los contenidos de gutenberg-small
+
+```bash
+hdfs dfs -ls /tmp/raw/gutenberg-small
+```
 ![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/hdfs/ls-gutenberg.png)
+
+Ahora, lo movemos al directorio datasets, creado desde Hue
+
+```bash
+hdfs dfs -put /tmp/raw/gutenberg-small /user/hadoop/datasets/
+```
+
+Probamos que haya funcionado:
+
+```bash
+hdfs dfs -ls /user/hadoop/datasets/
+```
+
 ![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/hdfs/put-gutenberg.png)
 
+Además, podemos traer archivos desde S3 hasta HDFS, por ejemplo, el archivo airlines.csv
+
+```bash
+hadoop distcp s3://aagutierrldatalake/raw/airlines.csv /tmp/
+```
 ![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/hdfs/traerS3.png)
+
+Verificamos que funcione:
+
+```bash
+hdfs dfs -ls /tmp
+```
+
 ![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/hdfs/ls-s3.png)
+
+Es posible copiar localmente los archivos. Primero, creamos un directorio llamado 'mis_datasets'
+
+```bash
+hdfs dfs -mkdir /hadoop
+hdfs dfs -mkdir /hadoop/mis_datasets
+```
+
+Entonces, podemos utilizar el comando -copyToLocal y probamos que se haya copiado exitosamente con -ls
+
+```bash
+hdfs dfs -copyToLocal /user/hadoop/datasets/Gutenberg-small/ /hadoop/mis_datasets/
+hdfs dfs -ls /hadoop/mis_datasets
+```
+
 ![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/hdfs/copyToLocal.png)
+
+Desde Hue, resulta bastante sencillo e intuitivo copiar y traer datasets a directorios. Por ejemplo, creamos manualmente el directorio datasets, dentro del home.
+
 ![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/hdfs/datasets-hue.png)
+
+Una vez creado, creamos un nuevo directorio, esta vez, llamado 'ONU', al que se le agregaran archivos del directorio del mismo nombre en los datasets del github de la materia.
+
 ![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/hdfs/onu-hue.png)
+
+Para cargar el dataset a este nuevo directorio, basta con arrastrarlo desde el explorador de archivos.
+
 ![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/hdfs/drag-drop-hue.png)
+
+Ahora, podemos ver que, dentro del directorio ONU, se han copiado correctamente los archivos.
+
 ![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/hdfs/one-content.png)
+
+Como prueba final, podemos ver los contenidos del archivo onu.csv
+
 ![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/hdfs/onu-csv.png)
 
 
