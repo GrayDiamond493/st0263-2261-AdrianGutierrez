@@ -100,6 +100,25 @@ http://ec2-3-83-22-112.compute-1.amazonaws.com:8888/
 
 Ahora, se realiza el manejo de archivos desde terminal EC2 en HDFS y desde Hue.
 
+![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/hdfs/hue.png)
+![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/hdfs/createdir-hue.png)
+
+![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/hdfs/datasets-hue.png)
+![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/hdfs/s3-hue.png)
+![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/hdfs/tmp-raw.png)
+![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/hdfs/ls-gutenberg.png)
+![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/hdfs/put-gutenberg.png)
+
+![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/hdfs/traerS3.png)
+![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/hdfs/ls-s3.png)
+![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/hdfs/copyToLocal.png)
+![image]()
+![image]()
+![image]()
+![image]()
+![image]()
+![image]()
+![image]()
 
 
 ## 5-3
