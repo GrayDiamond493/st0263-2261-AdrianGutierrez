@@ -221,7 +221,7 @@ Este, fue calculado por medio del script nombrado [dataempleados-mr.py]()
 
 Y, al correrlo, se obtiene la siguiente solución:
 
-![sln]()
+![sln](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/rmjob/empleados1.png)
 
 2. El salario promedio por Empleado
 
@@ -229,7 +229,7 @@ Este, fue calculado por medio del script nombrado [avgempleado.py]()
 
 Y, al correrlo, se obtiene la siguiente solución:
 
-![sln]()
+![sln](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/rmjob/empleados2.png)
 
 3. Número de SE por Empleado que ha tenido a lo largo de la estadística
 
@@ -237,7 +237,7 @@ Este, fue calculado por medio del script nombrado [seempleado.py]()
 
 Y, al correrlo, se obtiene la siguiente solución:
 
-![sln]()
+![sln](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/rmjob/empleados3.png)
 
 2) Se tiene un conjunto de acciones de la bolsa, en la cual se reporta a diario el valor promedio por acción.
 
@@ -249,7 +249,7 @@ Este, fue calculado por medio del script nombrado [dataempresas-mr1.py]()
 
 Y, al correrlo, se obtiene la siguiente solución:
 
-![sln]()
+![sln](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/rmjob/acciones.png)
 
 
 2. Listado de acciones que siempre han subido o se mantienen estables.
@@ -258,7 +258,7 @@ Este, fue calculado por medio del script nombrado [dataempresas-mr2.py]()
 
 Y, al correrlo, se obtiene la siguiente solución:
 
-![sln]()
+![sln](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/rmjob/acciones2.png)
 
 3. DIA NEGRO: Saque el día en el que la mayor cantidad de acciones tienen el menor valor de acción (DESPLOME), suponga una inflación independiente del tiempo.
 
@@ -266,7 +266,7 @@ Este, fue calculado por medio del script nombrado [dataempresas-mr2.py]()
 
 Y, al correrlo, se obtiene la siguiente solución:
 
-![sln]()
+![sln](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/rmjob/acciones3.png)
 
 3) Sistema de evaluación de películas
 
@@ -278,7 +278,7 @@ Este, fue calculado por medio del script nombrado [datapeliculas-mr1.py]()
 
 Y, al correrlo, se obtiene la siguiente solución:
 
-![sln]()
+![sln](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/rmjob/pelis1.png)
 
 
 2. Día en que más películas se han visto
@@ -287,7 +287,7 @@ Este, fue calculado por medio del script nombrado [datapeliculas-mr2.py]()
 
 Y, al correrlo, se obtiene la siguiente solución:
 
-![sln]()
+![sln](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/rmjob/pelis2.png)
 
 3. Día en que menos películas se han visto
 
@@ -295,7 +295,7 @@ Este, fue calculado por medio del script nombrado [datapeliculas-mr3.py]()
 
 Y, al correrlo, se obtiene la siguiente solución:
 
-![sln]()
+![s3n](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/rmjob/pelis3.png)
 
 
 4. Número de usuarios que ven una misma película y el rating promedio
@@ -304,7 +304,7 @@ Este, fue calculado por medio del script nombrado [datapeliculas-mr4.py]()
 
 Y, al correrlo, se obtiene la siguiente solución:
 
-![sln]()
+![sln](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/rmjob/pelis4.png)
 
 
 5. Día en que peor evaluación en promedio han dado los usuarios
@@ -313,7 +313,7 @@ Este, fue calculado por medio del script nombrado [datapeliculas-mr5.py]()
 
 Y, al correrlo, se obtiene la siguiente solución:
 
-![sln]()
+![sln](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/rmjob/pelis5.png)
 
 
 6. Día en que mejor evaluación han dado los usuarios
@@ -322,7 +322,7 @@ Este, fue calculado por medio del script nombrado [datapeliculas-mr6.py]()
 
 Y, al correrlo, se obtiene la siguiente solución:
 
-![sln]()
+![sln](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/rmjob/pelis6.png)
 
 
 7. La mejor y peor película evaluada por genero
@@ -331,5 +331,5 @@ Este, fue calculado por medio del script nombrado [datapeliculas-mr7.py]()
 
 Y, al correrlo, se obtiene la siguiente solución:
 
-![sln]()
+![sln](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/rmjob/pelis7.png)
 
