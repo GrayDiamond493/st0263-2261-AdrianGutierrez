@@ -241,11 +241,11 @@ Y, al correrlo, se obtiene la siguiente solución:
 
 2) Se tiene un conjunto de acciones de la bolsa, en la cual se reporta a diario el valor promedio por acción.
 
-Los datos utilizados para este apartado, se encuentran en el archivo de nombre [dataempresas.txt]()
+Los datos utilizados para este apartado, se encuentran en el archivo de nombre [dataempresas.txt](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/lab5-3/2.Empresas/dataempresas.txt)
 
 1. Por acción, dia-menor-valor, día-mayor-valor
 
-Este, fue calculado por medio del script nombrado [dataempresas-mr1.py]()
+Este, fue calculado por medio del script nombrado [dataempresas-mr1.py](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/lab5-3/2.Empresas/dataempresas-mr1.py)
 
 Y, al correrlo, se obtiene la siguiente solución:
 
@@ -254,7 +254,7 @@ Y, al correrlo, se obtiene la siguiente solución:
 
 2. Listado de acciones que siempre han subido o se mantienen estables.
 
-Este, fue calculado por medio del script nombrado [dataempresas-mr2.py]()
+Este, fue calculado por medio del script nombrado [dataempresas-mr2.py](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/lab5-3/2.Empresas/dataempresas-mr2.py)
 
 Y, al correrlo, se obtiene la siguiente solución:
 
@@ -262,7 +262,7 @@ Y, al correrlo, se obtiene la siguiente solución:
 
 3. DIA NEGRO: Saque el día en el que la mayor cantidad de acciones tienen el menor valor de acción (DESPLOME), suponga una inflación independiente del tiempo.
 
-Este, fue calculado por medio del script nombrado [dataempresas-mr2.py]()
+Este, fue calculado por medio del script nombrado [dataempresas-mr3.py](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/lab5-3/2.Empresas/dataempresas-mr3.py)
 
 Y, al correrlo, se obtiene la siguiente solución:
 
@@ -270,11 +270,11 @@ Y, al correrlo, se obtiene la siguiente solución:
 
 3) Sistema de evaluación de películas
 
-Los datos utilizados para este apartado, se encuentran en el archivo de nombre [datapeliculas.txt]()
+Los datos utilizados para este apartado, se encuentran en el archivo de nombre [datapeliculas.txt](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/lab5-3/3.Peliculas/datapeliculas.txt)
 
 1. Número de películas vista por un usuario, valor promedio de calificación
 
-Este, fue calculado por medio del script nombrado [datapeliculas-mr1.py]()
+Este, fue calculado por medio del script nombrado [datapeliculas-mr1.py](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/lab5-3/3.Peliculas/datapeliculas-mr1.py)
 
 Y, al correrlo, se obtiene la siguiente solución:
 
@@ -283,7 +283,7 @@ Y, al correrlo, se obtiene la siguiente solución:
 
 2. Día en que más películas se han visto
 
-Este, fue calculado por medio del script nombrado [datapeliculas-mr2.py]()
+Este, fue calculado por medio del script nombrado [datapeliculas-mr2.py](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/lab5-3/3.Peliculas/datapeliculas-mr2.py)
 
 Y, al correrlo, se obtiene la siguiente solución:
 
@@ -291,7 +291,7 @@ Y, al correrlo, se obtiene la siguiente solución:
 
 3. Día en que menos películas se han visto
 
-Este, fue calculado por medio del script nombrado [datapeliculas-mr3.py]()
+Este, fue calculado por medio del script nombrado [datapeliculas-mr3.py](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/lab5-3/3.Peliculas/datapeliculas-mr3.py)
 
 Y, al correrlo, se obtiene la siguiente solución:
 
@@ -300,7 +300,7 @@ Y, al correrlo, se obtiene la siguiente solución:
 
 4. Número de usuarios que ven una misma película y el rating promedio
 
-Este, fue calculado por medio del script nombrado [datapeliculas-mr4.py]()
+Este, fue calculado por medio del script nombrado [datapeliculas-mr4.py](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/lab5-3/3.Peliculas/datapeliculas-mr4.py)
 
 Y, al correrlo, se obtiene la siguiente solución:
 
@@ -309,7 +309,7 @@ Y, al correrlo, se obtiene la siguiente solución:
 
 5. Día en que peor evaluación en promedio han dado los usuarios
 
-Este, fue calculado por medio del script nombrado [datapeliculas-mr5.py]()
+Este, fue calculado por medio del script nombrado [datapeliculas-mr5.py](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/lab5-3/3.Peliculas/datapeliculas-mr5.py)
 
 Y, al correrlo, se obtiene la siguiente solución:
 
@@ -318,7 +318,7 @@ Y, al correrlo, se obtiene la siguiente solución:
 
 6. Día en que mejor evaluación han dado los usuarios
 
-Este, fue calculado por medio del script nombrado [datapeliculas-mr6.py]()
+Este, fue calculado por medio del script nombrado [datapeliculas-mr6.py](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/lab5-3/3.Peliculas/datapeliculas-mr6.py)
 
 Y, al correrlo, se obtiene la siguiente solución:
 
@@ -327,7 +327,7 @@ Y, al correrlo, se obtiene la siguiente solución:
 
 7. La mejor y peor película evaluada por genero
 
-Este, fue calculado por medio del script nombrado [datapeliculas-mr7.py]()
+Este, fue calculado por medio del script nombrado [datapeliculas-mr7.py](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/lab5-3/3.Peliculas/datapeliculas-mr7.py)
 
 Y, al correrlo, se obtiene la siguiente solución:
 
