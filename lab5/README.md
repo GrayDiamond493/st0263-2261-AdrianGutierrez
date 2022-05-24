@@ -13,9 +13,9 @@ Luego, es posible copiar el dataset dentro del Bucket. En este caso, se hace en 
 ![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab5/images/emr/upload%20dataset.png)
 
 Este Bucket se encuentra disponible publicamente desde el siguiente URL: https://aagutierrldatalake.s3.amazonaws.com/raw
-El sistema de archivos tiene el mismo orden de directorios y archivos que el directorio datasets, que provee el github de la materia.
+El sistema de archivos tiene el mismo orden de directorios y archivos que el directorio datasets, que provee el github de la materia. O, en su defecto, https://s3.console.aws.amazon.com/s3/buckets/aagutierrldatalake?region=us-east-1&prefix=raw/
 
-*Nota: Debe especificar el archivo a acceder. Por ejemplo: https://aagutierrldatalake.s3.amazonaws.com/raw/gutenberg-small/AbrahamLincoln___LincolnLetters.txt*
+*Nota: Si utiliza el primer enlace, debe especificar el archivo a acceder. Por ejemplo: https://aagutierrldatalake.s3.amazonaws.com/raw/gutenberg-small/AbrahamLincoln___LincolnLetters.txt*
 
 Posteriormente, se procede a crear el Cluster, desde la sección EMR de AWS.
 
