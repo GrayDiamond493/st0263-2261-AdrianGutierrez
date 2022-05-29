@@ -243,6 +243,95 @@ Del mismo modo, en S3:
 
 ## Hive (Tablas, Queries)
 
+El uso de Hive, para este lab, se hace desde la interfaz de usuario de Hue. Es posible ingresar a Hue desde una URL mostrada en *'Application user interfaces'* desde EMR en AWS. Para este caso concreto, la URL fue
+
+```bash
+http://ec2-3-93-23-84.compute-1.amazonaws.com:8888/
+```
+
+*Nota: El puerto 8888 debe estar abierto en el Security Group*
+*Nota2: Una vez en Hue, asegurarse de abrir el editor de Hive*
+
+### Crear Tabla HDI
+
+```sql
+use usernamedb;
+CREATE EXTERNAL TABLE HDI (id INT, country STRING, hdi FLOAT, lifeex INT, mysch INT, eysch INT, gni INT) 
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' 
+STORED AS TEXTFILE 
+LOCATION 's3://aagutierrldatalake/raw/onu/hdi/'
+```
+
+![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab6/img/hive/hive-query.PNG)
+
+### Consulta paises de la Tabla HDI
+
+```sql
+use usernamedb;
+show tables;
+describe hdi;
+
+select * from hdi;
+
+select country, gni from hdi where gni > 2000;   
+```
+
+![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab6/img/hive/hive-query2.PNG)
+
+### Crear Tabla EXPO
+
+```sql
+use usernamedb;
+CREATE EXTERNAL TABLE EXPO (country STRING, expct FLOAT) 
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' 
+STORED AS TEXTFILE 
+LOCATION 's3://aagutierrldatalake/raw/onu/export/'
+
+```
+
+![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab6/img/hive/hive-query3.PNG)
+
+### Unir Tablas
+
+```sql
+SELECT h.country, gni, expct FROM HDI h JOIN EXPO e ON (h.country = e.country) WHERE gni > 2000;
+```
+
+![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab6/img/hive/hive-query4.PNG)
+
 ## Hive (Wordcount)
+
+En este punto, se hara un Wordcount en Hive.
+
+### Crear Tabla Docs
+
+```sql
+CREATE EXTERNAL TABLE docs (line STRING) 
+STORED AS TEXTFILE 
+LOCATION 's3://aagutierrldatalake/raw/gutenberg-small/';
+
+```
+
+![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab6/img/hive/hive-query5.PNG)
+
+### Ordenar por palabra
+
+```sql
+SELECT word, count(1) AS count FROM (SELECT explode(split(line,' ')) AS word FROM docs) w 
+GROUP BY word 
+ORDER BY word DESC LIMIT 10;
+```
+
+![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab6/img/hive/hive-query6.PNG)
+
+### Ordenar por frecuencia (menor a mayor)
+
+```sql
+SELECT word, count(1) AS count FROM (SELECT explode(split(line,' ')) AS word FROM docs) w 
+GROUP BY word 
+ORDER BY word DESC LIMIT 10;
+```
+
+![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab6/img/hive/hive-query7.PNG)
 
 ## Jupyter SparkSQL
