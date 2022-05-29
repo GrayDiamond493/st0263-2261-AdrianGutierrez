@@ -102,6 +102,145 @@ Si todo salio correctamente, puede correrse el script en Zeppelin, resultando en
 
 ## Wordcount Jupyter
 
+A continuación, debemos crear un notebook para ser utilizado en Jupyter.
+
+![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab6/img/jupyter/starting_notebook.PNG)
+
+Al crearlo, es posible abrirlo en JupyterLab. Una vez dentro, es posible importar o copiar el script [wordcount-spark.ipynb](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab6/scripts/wordcount-spark.ipynb). Este script, realiza exactamente lo mismo que hemos hecho anteriormente en HDFS y Zeppelin, guardando un output en el directorio /tmp. No obstante, este cuenta con un paso a paso de distintas operaciones realizadas a los datos. Estas son:
+
+### Primeras 10 palabras
+
+INPUT
+```python
+files_rdd = sc.textFile("s3a://aagutierrldatalake/raw/gutenberg-small/*.txt")
+#files = sc.textFile("hdfs:///user/hadoop/datasets/gutenberg-small/*.txt")
+for f in files_rdd.take(10):
+    print(f)
+```
+
+OUTPUT
+```bash
+LINCOLN LETTERS
+
+By Abraham Lincoln
+
+
+Published by The Bibilophile Society
+```
+
+### Primeras 10 palabras (como tokens)
+
+INPUT
+```python
+tokens = files_rdd.flatMap(lambda line: line.split())
+for t in tokens.take(10):
+    print(t)
+```
+
+OUTPUT
+```bash
+LINCOLN
+LETTERS
+By
+Abraham
+Lincoln
+Published
+by
+The
+Bibilophile
+Society
+```
+
+### Imprimir las 10 palabras, como tuplas 
+
+INPUT
+```python
+wc1 = tokens.map(lambda word: (word, 1))
+for c in wc1.take(10):
+    print(c)
+```
+
+OUTPUT
+```bash
+('LINCOLN', 1)
+('LETTERS', 1)
+('By', 1)
+('Abraham', 1)
+('Lincoln', 1)
+('Published', 1)
+('by', 1)
+('The', 1)
+('Bibilophile', 1)
+('Society', 1)
+```
+
+### Imprimir 10 palabras, con su numero de apariciones
+
+INPUT
+```python
+wc = wc1.reduceByKey(lambda a, b: a + b)
+for c in wc.take(10):
+    print(c)
+```
+
+OUTPUT
+```bash
+('thoroughly', 15)
+('themselves', 192)
+('them.', 371)
+('letter', 312)
+('A.', 1456)
+('ORIGINALS', 1)
+('THEY', 1)
+('sum', 59)
+('singular', 18)
+('let', 414)
+```
+
+### Imprimir las palabras que aparecen con mayor frecuencia
+
+INPUT
+```python
+wcsort = wc.sortBy(lambda a: -a[1])
+for c in wcsort.take(10):
+    print(c)
+```
+
+OUTPUT
+```bash
+('the', 44647)
+('of', 28020)
+('to', 23208)
+('and', 20444)
+('in', 13174)
+('that', 12265)
+('I', 10880)
+('a', 10431)
+('is', 7776)
+('be', 7148)
+```
+
+### Guardar resultado 
+
+```python
+#salvar los datos de salida, fijarse que no exista: hdfs:///tmp/<your-username>wcout10
+wc.coalesce(1).saveAsTextFile("hdfs:///tmp/wcoutj")
+#si esta trabajando en aws (igual verifique que no exista previamente wcout10):
+wc.coalesce(1).saveAsTextFile("s3://aagutierrldatalake/wcout")
+```
+![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab6/img/jupyter/jupyter_progress.PNG)
+
+Esto, guarda la salida del programa tal y como los anteriores scripts utilizados para este laboratorio.
+
+Podemos ver que, efectivamente, se ha guardado la salida en el HDFS:
+
+![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab6/img/jupyter/success_jupyter.PNG)
+
+Del mismo modo, en S3:
+
+![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab6/img/jupyter/jupyter_datalake_success.PNG)
+![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab6/img/jupyter/jupyter_datalake_file.PNG)
+
 ## Hive (Tablas, Queries)
 
 ## Hive (Wordcount)
