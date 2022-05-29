@@ -297,7 +297,7 @@ LOCATION 's3://aagutierrldatalake/raw/onu/export/'
 SELECT h.country, gni, expct FROM HDI h JOIN EXPO e ON (h.country = e.country) WHERE gni > 2000;
 ```
 
-![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab6/img/hive/hive-query4.PNG)
+![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab6/img/hive/hive-query4-join.PNG)
 
 ## Hive (Wordcount)
 
