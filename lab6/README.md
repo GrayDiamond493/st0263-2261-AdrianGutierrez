@@ -2,7 +2,9 @@
 
 ## Wordcount EMR
 
-Para este primer paso, se va a ejecutar un wordcount por linea de comando 'pyspark' INTERACTIVO en EMR con datos en HDFS vía ssh en el nodo master. La configuración del Cluster, Security Group, Buckets, entre otros prerrequisitos, fueron creados en el [laboratorio 5](). Para ello, necesitaremos el comando pyspark, que ya debe estar instalado por defecto en el nodo master.
+Para este primer paso, se va a ejecutar un wordcount por linea de comando 'pyspark' INTERACTIVO en EMR con datos en HDFS vía ssh en el nodo master. La configuración del Cluster, Security Group, Buckets, entre otros prerrequisitos, fueron creados en el [laboratorio 5](). Para ello, necesitaremos el comando pyspark, que ya debe estar instalado por defecto en el nodo mater.
+
+![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab6/img/spark-hdfs/spark_welcome.PNG)
 
 ```bash
 pyspark
@@ -14,6 +16,8 @@ O, con datos del Bucket S3
 ```bash
 >>> files_rdd = sc.textFile("s3a://aagutierrldatalake/raw/gutenberg-small/*.txt")
 ```
+
+![image]()
 
 Luego, se utilizan las siguientes lineas para guardar las salidas en el HDFS
 ```bash
@@ -38,8 +42,6 @@ spark-submit --master yarn --deploy-mode cluster wc-pyspark.py
 ```
 
 Ello, resulta en
-
-![image]()
 
 ## Wordcount Zeppelin
 
