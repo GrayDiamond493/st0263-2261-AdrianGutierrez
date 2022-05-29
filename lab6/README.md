@@ -335,3 +335,49 @@ ORDER BY word DESC LIMIT 10;
 ![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab6/img/hive/hive-query7.PNG)
 
 ## Jupyter SparkSQL
+
+Finalmente, volvemos a Jupyter e importamos/copiamos el script [sparksql-onu-jupyter.ipynb]()
+
+![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab6/img/jupyter-query/jupyter_hive.PNG)
+
+Al leer el archivo de la ONU, podemos operar los datos obtenidos.
+```python
+df=spark.read.csv('s3://aagutierrldatalake/raw/onu/hdi/',inferSchema=True,header=True)
+```
+
+### Mostrar primeros 10 datos
+
+```python
+df.show(10)
+```
+![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab6/img/jupyter-query/jupyter_show.PNG)
+
+### Mostrar países en los que la expectativa de vida es mayor a 80 años. 
+
+Para ello, hacemos una nueva consulta
+```python
+dfsql = spark.sql("select country, lifeex from hdi where lifeex > 80")
+```
+Y se muestran los resultados del query
+```python
+dfsql.show()
+```
+
+![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab6/img/jupyter-query/jupyter_show2.PNG)
+
+### Guardar Output
+
+Por último, guardamos la salida obtenida en el datalake del Bucket S3
+
+```python
+write_uri='s3://aagutierrldatalake/df_csv'
+dfsql.coalesce(1).write.format("csv").option("header","true").save(write_uri)
+```
+
+![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab6/img/jupyter-query/jupyter_write.PNG)
+
+Si todo se da correctamente, es posible confirmar que el guardado se hizo correctamente en el S3
+
+![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab6/img/jupyter-query/jupyter_success.PNG)
+
+
