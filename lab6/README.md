@@ -65,6 +65,41 @@ Luego, debe haberse generado una nueva salida en el directorio tmp, bajo el nomb
 
 ## Wordcount Zeppelin
 
+Es posible ingresar a Zeppelin desde una URL mostrada en *'Application user interfaces'* desde EMR en AWS. Para este caso concreto, la URL fue
+
+```bash
+http://ec2-3-93-23-84.compute-1.amazonaws.com:8890/
+```
+
+*Nota: El puerto 8890 debe estar abierto en el Security Group*
+
+Una vez dentro, puede verse la interfaz de Zeppelin.
+
+![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab6/img/zeppelin/zeppelin.PNG)
+
+En Zeppelin, se crea un notebook. Para este caso, se dio el nombre aagutierrl/labspark
+
+![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab6/img/zeppelin/labspark.PNG)
+
+*Nota: Es importante escoger Spark como Kernel/Interpreter en el notebook para garantizar su funcionamiento*
+
+En el notebook, copiamos y corremos el siguiente Script,el cual ejecuta exactamente las mismas instrucciones que hemos realizado en HDFS.
+
+```python
+    %spark2.pyspark
+    # WORDCOUNT COMPACTO
+    files_rdd = sc.textFile("s3a://aagutierrl/raw/gutenberg-small/*.txt")
+    wc_unsort = files_rdd.flatMap(lambda line: line.split()).map(lambda word: (word, 1)).reduceByKey(lambda a, b: a + b)
+    wc = wc_unsort.sortBy(lambda a: -a[1])
+    for tupla in wc.take(10):
+        print(tupla)
+    wc.coalesce(1).saveAsTextFile("hdfs:///tmp/wcout5")
+```
+
+Si todo salio correctamente, puede correrse el script en Zeppelin, resultando en lo siguiente:
+
+![image](https://github.com/GrayDiamond493/st0263-2261-AdrianGutierrez/blob/main/lab6/img/zeppelin/zeppelin_run.PNG)
+
 ## Wordcount Jupyter
 
 ## Hive (Tablas, Queries)
