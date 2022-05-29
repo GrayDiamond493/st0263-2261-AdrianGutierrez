@@ -2,7 +2,7 @@
 
 ## Wordcount EMR
 
-Para este primer paso, se va a ejecutar un wordcount por linea de comando 'pyspark' INTERACTIVO en EMR con datos en HDFS vía ssh en el nodo master. La configuración del Cluster, Security Group, Buckets, entre otros prerrequisitos, fueron creados en el [laboratorio 5](). Para ello, necesitaremos el comando pyspark, que ya debe estar instalado por defecto en el nodo mater.
+Para este primer paso, se va a ejecutar un wordcount por linea de comando 'pyspark' INTERACTIVO en EMR con datos en HDFS vía ssh en el nodo master. La configuración del Cluster, Security Group, Buckets, entre otros prerrequisitos, fueron creados en el [laboratorio 5](). Para ello, necesitaremos el comando pyspark, que ya debe estar instalado por defecto en el nodo master.
 
 ```bash
 pyspark
